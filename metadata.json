@@ -1,5 +1,5 @@
 {
-  "name": "SoulSpace: Personalized Counseling Companion",
+  "name": "SoulSpace 2: Personalized Counseling Companion",
   "description": "A comforting, personalized AI counseling companion offering various personalities like Gentle Mentor or Wise Elder, supporting both text and real-time voice interaction.",
   "requestFramePermissions": [
     "microphone"

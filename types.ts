@@ -21,10 +21,14 @@ export enum MessageRole {
   MODEL = 'model'
 }
 
+export type LanguageCode = 'en' | 'es' | 'fr' | 'ja' | 'de' | 'ar' | 'ko' | 'zh';
+
 export interface ChatMessage {
   id: string;
   role: MessageRole;
   text: string;
+  translatedText?: string; // Cache for on-demand translation
+  roleInLanguage?: string;
   audioUrl?: string;
   audioBase64?: string;
   audioMimeType?: string;

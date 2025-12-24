@@ -1,4 +1,5 @@
-import { PersonalityType, PersonalityConfig } from './types';
+
+import { PersonalityType, PersonalityConfig, LanguageCode } from './types';
 import { BookHeart, Leaf, Sun, Coffee } from 'lucide-react';
 import React from 'react';
 
@@ -39,6 +40,21 @@ export const PERSONALITIES: Record<PersonalityType, PersonalityConfig> = {
     voiceName: "Charon", // Deep, resonant
     color: "bg-violet-100 text-violet-800 border-violet-200"
   }
+};
+
+export const SUPPORTED_LANGUAGES: { code: LanguageCode; label: string; flag: string }[] = [
+  { code: 'en', label: 'English', flag: '🇺🇸' },
+  { code: 'es', label: 'Español', flag: '🇪🇸' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'ja', label: '日本語', flag: '🇯🇵' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+  { code: 'ar', label: 'العربية', flag: '🇸🇦' },
+  { code: 'ko', label: '한국어', flag: '🇰🇷' },
+  { code: 'zh', label: '中文', flag: '🇨🇳' },
+];
+
+export const getLanguageLabel = (code: LanguageCode) => {
+  return SUPPORTED_LANGUAGES.find(l => l.code === code)?.label || 'English';
 };
 
 export const getIcon = (name: string, className?: string) => {
